@@ -1,0 +1,13 @@
+{
+  "name": "FFT",
+  "version": "1.0.0",
+  "description": "None",
+  "main": "fft.js",
+  "scripts": {
+    "test": "echo everything is OK"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
