@@ -23,7 +23,7 @@ function generateWhiteNoise(duration, sampleRate) {
 }
 
 const convertor = new Convert();
-const whiteNoise = generateWhiteNoise(duration, sampleRate); // میتونه هر نوع نمونه سیگنالی باشه اما باید موقع تبدیل برگشت براساس ارایه مد نظر خروجی گرفته بشه که در اینجا Float32Array درنظر گرفته شده.
+const whiteNoise = generateWhiteNoise(duration, sampleRate); // **
 const xComplex = convertor.RealToComplex(whiteNoise);
 const X = fft(xComplex);
 for (let k = 0; k < X.length; k++) {
@@ -36,4 +36,4 @@ const result = convertor.ComplexToF32(ifft(X), whiteNoise.length);
 
 console.log(result);
 ```
-
+** میتونه هر نوع نمونه سیگنالی باشه اما باید موقع تبدیل برگشت براساس ارایه مد نظر خروجی گرفته بشه که در اینجا Float32Array درنظر گرفته شده(برای خروجی گیری به یک فرمت صوتی قابل شنیدن)
